@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+
+    <script src="/assets/js/sweetalert.all.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+          <div class="h1">Product Management</div>
+          <div class="card border-success">
+            <div class="card-header">Add new product</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row align-items-center">
+                      <input type="hidden" name="productID">
+                      <div class="col-5">
+                        <label class="sr-only" for="inlineFormInput">Name</label>
+                        <input type="text" name="name" class="form-control mb-2" id="inlineFormInput" placeholder="Enter name product">
+                      </div>
+                      <div class="col-3">
+                        <label class="sr-only" for="inlineFormInputGroup">Brand</label>
+                        <div class="input-group mb-2 selector">
+                            <select name="brand" class="custom-select mr-sm-2" id="inlineFormProductSelect">
+                                <option selected value="Apple">Apple</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Nokia">Nokia</option>
+                                <option value="Xiaomi">Xiaomi</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button type="button" onclick="add()" class="btn btn-primary mb-2 col-12 submit">Add</button>
+                        <!-- <button type="button" onclick="update()" class="btn btn-primary mb-2 col-12 update d-none">Update</button> -->
+                        <a href="javascript:;" onclick="update()" class="btn btn-primary mb-2 col-12 update d-none">Update</a>
+                      </div>
+                      <div class="col-2">
+                        <button type="button" onclick="clear()" disabled class="btn btn-outline-secondary cancel mb-2 col-12">Cancel</button>
+                      </div>
+                    </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2">
+            <div class="h2">Display all product</div>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" hidden>#</th>
+                    <th scope="col">Product name</th>
+                    <th scope="col">Brand name</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+        </div>
+      </div>
+
+      <script src="/assets/js/script.js"></script>
+</body>
+</html>
